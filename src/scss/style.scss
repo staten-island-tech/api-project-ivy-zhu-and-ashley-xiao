@@ -1,2 +1,64 @@
 @import "_variables";
-@import "_main-page";
+
+//header
+.header {
+  height: 92vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.6)), to(rgba(32, 32, 32, 0.6))),url("imgs/books.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.heading {
+  color:white;
+  @include roboto;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  line-height: 1.3;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+.title2 {
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+.nav-bar {
+  height: 8vh;
+  background-color: #ECE3D1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+}
+
+.nav-btns {
+  display: flex;
+  flex-direction: row;
+  margin-right: 4rem;
+  @include roboto;
+  font-weight: 400;
+  font-size: 3vh;
+  justify-content: space-evenly;
+  width: 40vw;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  margin-left: 4rem;
+  height: 3.5vh; 
+}
