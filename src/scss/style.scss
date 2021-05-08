@@ -32,6 +32,7 @@
   font-weight: 900;
 }
 
+//nav bar
 .nav-bar {
   height: 8vh;
   background-color: #ECE3D1;
@@ -61,4 +62,46 @@
 .logo {
   margin-left: 4rem;
   height: 3.5vh; 
+}
+
+//section 1
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include roboto;
+}
+
+.search-line {
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+  margin-top: 4rem;
+}
+
+.about-nyt {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutnyt-text {
+  width: 55%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-header {
+  font-size: 3rem;
+}
+
+.about-paragraph {
+  font-size: 2rem;
+}
+
+.nyt-pic {
+  width: 25rem;
+  height: 20rem;
 }
