@@ -41,6 +41,7 @@
   justify-content: space-between;
   align-items: center;
   position: sticky;
+  top:0;
 }
 
 .nav-btns {
@@ -109,8 +110,90 @@
 // search
 .search-page {
   height: 50%;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.6)), to(rgba(32, 32, 32, 0.6))),url("imgs/books.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.6)), to(rgba(32, 32, 32, 0.6))),url("imgs/books5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.search-section {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  padding-top:6rem;
+}
+
+.search-text {
+  font-size: 3rem;
+  color:white;
+  font-weight: 400;
+  @include roboto;
+  margin-bottom: 5rem;
+}
+
+.search-bar {
+  width: 60%;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+
+//result
+.search-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.searched-books {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  margin: 4rem 3rem 1rem 3rem;
+  width: 75%;
+  border-bottom: black .5px solid;
+  padding-bottom: 4.5rem;
+}
+
+.book-info {
+  margin-left: 4rem;
+  @include roboto;
+  width: 75%;
+  font-size: 1.7rem;
+}
+
+.book-title {
+  font-weight: 400;
+  margin: 0;
+}
+
+.book-cover {
+  height: 20rem;
+}
+
+.book-author {
+  font-weight: 100;
+  margin: 1rem 0;
+}
+
+.buy-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.shop-btn {
+  text-decoration: none;
+  color: white;
+  border: 1px black solid;
+  padding: 1rem;
+  background-color: #2a4a68;
+}
+
