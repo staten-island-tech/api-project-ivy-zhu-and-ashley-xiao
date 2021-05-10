@@ -1,7 +1,7 @@
 import { DOMSelectors } from "./DOM";
 
 const key = "usCi4RaBNDKBfG3jWXiTgwjpfSJ6aWG4";
-let currentPage = 0;
+let currentPage
 
 const query = async function () {
     try {
@@ -9,25 +9,46 @@ const query = async function () {
         const data = await response.json();
         const results = data.results;
         const lists = results.lists;
-        lists[currentPage].books.forEach((book) => {
-            DOMSelectors.searchResult.insertAdjacentHTML("beforeend", 
-            `<div class="searched-books">
-            <img
-            src="${book.book_image}"
-            alt=""
-            class="book-cover">
-            <div class="book-info">
-                <h1 class="book-title">${book.title}</h1>
-                <p class="book-author">${book.contributor}</p>
-                <p class="book-description">
-                    ${book.description}
-                </p>
-                <div class="buy-btn">
-                    <a class="shop-btn" href="${book.amazon_product_url}">Buy Now</a></div>
+        currentPage = 0;
+
+        function displayBooks() {
+            lists[currentPage].books.forEach((book) => {
+                DOMSelectors.searchResult.insertAdjacentHTML("beforeend", 
+                `<div class="searched-books">
+                <img
+                src="${book.book_image}"
+                alt=""
+                class="book-cover">
+                <div class="book-info">
+                    <h1 class="book-title">${book.title}</h1>
+                    <p class="book-author">${book.contributor}</p>
+                    <p class="book-description">
+                        ${book.description}
+                    </p>
+                    <div class="buy-btn">
+                        <a class="shop-btn" href="${book.amazon_product_url}">Buy Now</a></div>
+                    </div>
                 </div>
-            </div>
-        </div>`);
+            </div>`);
+            });
+        }
+        displayBooks();
+
+        DOMSelectors.nextButton.addEventListener('click', () => {
+            currentPage++
+            changePage()
         });
+
+        DOMSelectors.previousButton.addEventListener('click', () => {
+            currentPage--
+            changePage()
+        });
+
+        function changePage() {
+            DOMSelectors.searchResult.innerHTML= "";
+            displayBooks();
+        }
+
     } catch (error) {
         console.log(error);
         alert("something went wrong")
