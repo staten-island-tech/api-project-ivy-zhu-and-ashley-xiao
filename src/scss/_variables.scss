@@ -5,12 +5,9 @@ body{
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
 }
 
 $colors: (
     primary: #ECE3D1,
 );
-
-@mixin roboto {
-    font-family: 'Roboto', sans-serif;
-}

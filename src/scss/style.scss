@@ -11,7 +11,6 @@
 
 .heading {
   color:white;
-  @include roboto;
   display:flex;
   flex-direction: column;
   text-align: center;
@@ -48,7 +47,6 @@
   display: flex;
   flex-direction: row;
   margin-right: 4rem;
-  @include roboto;
   font-weight: 400;
   font-size: 3vh;
   justify-content: space-evenly;
@@ -71,7 +69,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @include roboto;
 }
 
 .search-line {
@@ -132,16 +129,60 @@
   font-size: 3rem;
   color:white;
   font-weight: 400;
-  @include roboto;
   margin-bottom: 5rem;
 }
 
-.search-bar {
+.search-form {
   width: 60%;
+  display:flex;
+  flex-direction: row;
+}
+
+.search-bar {
+  width: 100%;
   padding: 1rem 2rem;
   border-radius: 0;
   border: none;
   outline: none;
+}
+
+.submit-btn {
+  width: 9rem;
+  outline: none;
+  border-radius: 0;
+  padding: 5px 1rem;
+  color:black;
+  border: none;
+  background-color: rgb(184, 184, 184);
+}
+
+// page navigation
+.page-btns {
+  display:flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.page-nav {
+  width: 17%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0 3rem 0;
+  margin-right: 12.5%; 
+}
+
+.previous-btn,
+.next-btn {
+  font-size: 2rem;
+  border:none;
+  border-radius: 0;
+  outline: none;
+  height: 3.5rem;
+  width: 10rem;
+  padding: 5px 1rem;
+  background-color: #ECE3D1;
+  color: rgb(41, 17, 17);
 }
 
 //result
@@ -165,7 +206,6 @@
 
 .book-info {
   margin-left: 4rem;
-  @include roboto;
   width: 75%;
   font-size: 1.7rem;
 }
@@ -196,4 +236,3 @@
   padding: 1rem;
   background-color: #2a4a68;
 }
-

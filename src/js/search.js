@@ -1,13 +1,15 @@
 import { DOMSelectors } from "./DOM";
 
 const key = "usCi4RaBNDKBfG3jWXiTgwjpfSJ6aWG4";
+let currentPage = 0;
 
 const query = async function () {
     try {
-        const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${key}`);
+        const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=${key}`);
         const data = await response.json();
         const results = data.results;
-        results.books.forEach((book) => {
+        const lists = results.lists;
+        lists[currentPage].books.forEach((book) => {
             DOMSelectors.searchResult.insertAdjacentHTML("beforeend", 
             `<div class="searched-books">
             <img
