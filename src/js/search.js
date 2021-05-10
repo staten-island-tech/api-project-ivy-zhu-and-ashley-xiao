@@ -34,15 +34,27 @@ const query = async function () {
         }
         displayBooks();
 
-        DOMSelectors.nextButton.addEventListener('click', () => {
-            currentPage++
-            changePage()
-        });
+        DOMSelectors.nextButton.addEventListener('click', nextPage)
 
-        DOMSelectors.previousButton.addEventListener('click', () => {
-            currentPage--
-            changePage()
-        });
+        function nextPage(){
+            if (currentPage === lists.length -1) {
+                
+            } else {
+                currentPage++
+                changePage()
+            }
+        }
+
+        DOMSelectors.previousButton.addEventListener('click', previousPage);
+
+        function previousPage(){
+            if (currentPage === 0) {
+
+            } else {
+                currentPage--
+                changePage()
+            }
+        }
 
         function changePage() {
             DOMSelectors.searchResult.innerHTML= "";
