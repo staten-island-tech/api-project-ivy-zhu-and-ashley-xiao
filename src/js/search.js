@@ -9,6 +9,7 @@ const query = async function () {
         const data = await response.json();
         const results = data.results;
         const lists = results.lists;
+        console.log(lists);
         currentPage = 0;
 
         function displayBooks() {
