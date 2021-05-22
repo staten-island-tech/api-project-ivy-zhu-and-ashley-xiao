@@ -1,0 +1,54 @@
+@import "_variables";
+
+//popular series
+.popular-header {
+  font-size: 4rem;
+}
+
+#popular-books {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  width: 80%;
+  padding-bottom: 4.5rem;
+}
+
+.popular-book-info {
+  margin-left: 4rem;
+  width: 75%;
+  font-size: 1.7rem;
+}
+
+.popular-book-title {
+  font-weight: 400;
+  margin: 0;
+}
+
+.popular-book-img {
+  height: 20rem;
+}
+
+.popular-book-author {
+  font-weight: 100;
+  margin: 1rem 0;
+}
+
+.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.popular-list {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,32 @@
+@import "_variables";
+.nav-bar {
+    height: 8vh;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0;
+  }
+  
+  .nav-btns {
+    display: flex;
+    flex-direction: row;
+    margin-right: 4rem;
+    font-weight: 400;
+    font-size: 3vh;
+    justify-content: space-evenly;
+    width: 40vw;
+  }
+  
+  .nav-btn {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .logo {
+    margin-left: 4rem;
+    height: 3.5vh; 
+  }
+  
