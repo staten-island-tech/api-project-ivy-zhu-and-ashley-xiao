@@ -1,143 +1,113 @@
 @import "_variables";
 
-// search
+//search bar
 .search-page {
-  height: 50%;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.6)), to(rgba(32, 32, 32, 0.6))),url("imgs/books5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
+    height: 50%;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.6)), to(rgba(32, 32, 32, 0.6))),url("imgs/books5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-section {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding-top:6rem;
+  }
+  
+  .search-text {
+    font-size: 3rem;
+    color:white;
+    font-weight: 400;
+    margin-bottom: 5rem;
+  }
+  
+  .search-form {
+    width: 60%;
+    display:flex;
+    flex-direction: row;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: none;
+    outline: none;
+  }
+  
+  .submit-btn {
+    width: 9rem;
+    outline: none;
+    border-radius: 0;
+    padding: 5px 1rem;
+    color:black;
+    border: none;
+    background-color: rgb(184, 184, 184);
+  }
+  
+  //results
+  
 
-.search-section {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
-  padding-top:6rem;
-}
+  .searched-books {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90vw;
+    margin: 1rem auto;
+    padding: 3rem auto;
+    align-items: center;
+  }
 
-.search-text {
-  font-size: 3rem;
-  color:white;
-  font-weight: 400;
-  margin-bottom: 5rem;
-}
+  .search-book {
+    width:40%;
+    height: 23rem;
+    font-size: 1.7rem;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem auto;
+    position:relative;
+  }
 
-.search-form {
-  width: 60%;
-  display:flex;
-  flex-direction: row;
-}
+  .searched-book-title {
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem;
+  }
 
-.search-bar {
-  width: 100%;
-  padding: 1rem 2rem;
-  border-radius: 0;
-  border: none;
-  outline: none;
-}
+  .searched-book-author {
+    font-weight: 400;
+    text-align: center;
+    margin: 1rem;
+  }
 
-.submit-btn {
-  width: 9rem;
-  outline: none;
-  border-radius: 0;
-  padding: 5px 1rem;
-  color:black;
-  border: none;
-  background-color: rgb(184, 184, 184);
-}
+  .searched-book-description {
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem;
+  }
 
-// page navigation
-.page-btns {
-  display:flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
+  .review-btn {
+    margin: 3rem;
+  }
+  
+  .book-review {
+    text-decoration: none;
+    color: white;
+    border: 1px black solid;
+    padding: 1rem;
+    background-color: #2a4a68;
+    width: 5rem;
+  }
 
-.page-nav {
-  width: 17%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2.5rem 0 3rem 0;
-  margin-right: 12.5%; 
-}
-
-.previous-btn,
-.next-btn {
-  font-size: 2rem;
-  border:none;
-  border-radius: 0;
-  outline: none;
-  height: 3.5rem;
-  width: 10rem;
-  padding: 5px 1rem;
-  background-color: $primary-color;
-  color: rgb(41, 17, 17);
-}
-
-.previous-btn,
-.next-btn:hover {
-  cursor: pointer;
-}
-
-.hidden {
-  display: none;
-}
-
-//result
-.search-results {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.searched-books {
-  display: flex;
-  flex-direction: row;
-  justify-content:space-around;
-  align-items: center;
-  margin: 4rem 3rem 1rem 3rem;
-  width: 75%;
-  border-bottom: black .5px solid;
-  padding-bottom: 4.5rem;
-}
-
-.book-info {
-  margin-left: 4rem;
-  width: 75%;
-  font-size: 1.7rem;
-}
-
-.book-title {
-  font-weight: 400;
-  margin: 0;
-}
-
-.book-cover {
-  height: 20rem;
-}
-
-.book-author {
-  font-weight: 100;
-  margin: 1rem 0;
-}
-
-.buy-btn {
-  display: flex;
-  justify-content: center;
-}
-
-.shop-btn {
-  text-decoration: none;
-  color: white;
-  border: 1px black solid;
-  padding: 1rem;
-  background-color: #2a4a68;
-}
+  .disabled {
+    pointer-events: none;
+  }

@@ -7,29 +7,6 @@
   flex-direction: column;
 }
 
-.search-line {
-  text-decoration: none;
-  color: black;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  position: relative;
-  display: inline-block;
-  overflow:hidden;
-  background: linear-gradient(to right, $secondary-color, $primary-color 50%, black 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: .2s ease;
-}
-
-.search-line:hover {
-  background-position: 0 100%;
-}
-
 .about-nyt {
   display:flex;
   flex-direction: row;

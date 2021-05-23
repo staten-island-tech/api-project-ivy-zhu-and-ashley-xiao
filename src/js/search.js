@@ -1,70 +1,38 @@
 import { DOMSelectors } from "./DOM";
 
 const key = "usCi4RaBNDKBfG3jWXiTgwjpfSJ6aWG4";
-let currentPage
 
-const query = async function () {
-    try {
-        const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=${key}`);
-        const data = await response.json();
-        const results = data.results;
-        const lists = results.lists;
-        console.log(lists);
-        currentPage = 0;
-
-        function displayBooks() {
-            lists[currentPage].books.forEach((book) => {
-                DOMSelectors.searchResult.insertAdjacentHTML("beforeend", 
-                `<div class="searched-books">
-                <img
-                src="${book.book_image}"
-                alt=""
-                class="book-cover">
-                <div class="book-info">
-                    <h1 class="book-title">${book.title}</h1>
-                    <p class="book-author">${book.contributor}</p>
-                    <p class="book-description">
-                        ${book.description}
-                    </p>
-                    <div class="buy-btn">
-                        <a class="shop-btn" href="${book.amazon_product_url}">Buy Now</a></div>
-                    </div>
-                </div>
-            </div>`);
-            });
-        }
-        displayBooks();
-
-        DOMSelectors.nextButton.addEventListener('click', nextPage)
-
-        function nextPage(){
-            if (currentPage === lists.length -1) {
-                
-            } else {
-                currentPage++
-                changePage()
+const listen = function () {
+    DOMSelectors.searchForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        DOMSelectors.searchResults.innerHTML= ""
+        const searchParams = DOMSelectors.searchInput.value;
+        const searchQuery = async function () {
+            try {
+                const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?title=${searchParams}&api-key=${key}`);
+                const data = await response.json();
+                const results = data.results;
+            
+                console.log(results);
+                function displayBooks() {
+                    results.forEach((book) => {
+                        const reviews = book.reviews[0];
+                        DOMSelectors.searchResults.insertAdjacentHTML("beforeend", 
+                        `<div class="search-book">
+                        <h1 class="searched-book-title">${book.title}</h1>
+                        <p class="searched-book-author">${book.author}</p>
+                        <div class="review-btn"><a class="book-review" href="${reviews.sunday_review_link}">Reviews</a></div>
+                        </div>`);
+                    });
+                }
+                displayBooks();
+        
+            } catch (error) {
+                console.log(error);
+                alert("something went wrong")
             }
-        }
-
-        DOMSelectors.previousButton.addEventListener('click', previousPage);
-
-        function previousPage(){
-            if (currentPage === 0) {
-
-            } else {
-                currentPage--
-                changePage()
-            }
-        }
-
-        function changePage() {
-            DOMSelectors.searchResult.innerHTML= "";
-            displayBooks();
-        }
-
-    } catch (error) {
-        console.log(error);
-        alert("something went wrong")
-    }
-};
-query();
+        };
+        searchQuery();
+    });
+}
+listen();

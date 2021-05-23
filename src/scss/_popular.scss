@@ -1,8 +1,37 @@
 @import "_variables";
 
-//popular series
-.popular-header {
-  font-size: 4rem;
+// page navigation
+.page-btns {
+  display:flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.page-nav {
+  width: 17%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0 3rem 0;
+  margin-right: 12.5%; 
+}
+
+.previous-btn,
+.next-btn {
+  font-size: 2rem;
+  border:none;
+  border-radius: 0;
+  outline: none;
+  height: 3.5rem;
+  width: 10rem;
+  padding: 5px 1rem;
+  background-color: $primary-color;
+  color: rgb(41, 17, 17);
+}
+
+.previous-btn,
+.next-btn:hover {
+  cursor: pointer;
 }
 
 #popular-books {
@@ -12,42 +41,86 @@
   flex-direction: column;
 }
 
-.book {
+.popular-list {
   display: flex;
   flex-direction: row;
   justify-content:space-around;
   align-items: center;
-  width: 80%;
+  margin: 4rem 3rem 1rem 3rem;
+  width: 75%;
+  border-bottom: black .5px solid;
   padding-bottom: 4.5rem;
 }
 
-.popular-book-info {
+.book-info {
   margin-left: 4rem;
   width: 75%;
   font-size: 1.7rem;
 }
 
-.popular-book-title {
+.book-title {
   font-weight: 400;
   margin: 0;
 }
 
-.popular-book-img {
+.book-cover {
   height: 20rem;
 }
 
-.popular-book-author {
+.book-author {
   font-weight: 100;
   margin: 1rem 0;
 }
 
-.reverse {
+.buy-btn {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: center;
 }
 
-.popular-list {
-  display:flex;
+.shop-btn {
+  text-decoration: none;
+  color: white;
+  border: 1px black solid;
+  padding: 1rem;
+  background-color: #2a4a68;
+}
+
+.popular-header {
+  font-size: 4rem;
+  margin: 1rem;
+}
+
+#popular-books {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-line {
+  text-decoration: none;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 2rem;
+  position: relative;
+  display: inline-block;
+  overflow:hidden;
+  background: linear-gradient(to right, $secondary-color, $primary-color 50%, black 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: .2s ease;
+}
+
+.search-line:hover {
+  background-position: 0 100%;
+}
+
+.popular-heading {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
