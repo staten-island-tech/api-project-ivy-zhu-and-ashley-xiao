@@ -12,14 +12,14 @@ const listen = function () {
                 const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?title=${searchParams}&api-key=${key}`);
                 const data = await response.json();
                 const results = data.results;
-            
+                
                 function checkForBlank() {
                     if (searchParams === "") {
                         DOMSelectors.searchResults.classList.add("hidden");
                         DOMSelectors.emptyInput.classList.remove("hidden");
                     } else {
                         DOMSelectors.searchResults.classList.remove("hidden")
-                        DOMSelectors.errorSection.classList.add("hidden");
+                        DOMSelectors.emptyInput.classList.add("hidden");
                     }
                 }
                 checkForBlank();
@@ -30,7 +30,7 @@ const listen = function () {
                         DOMSelectors.bookUnfound.classList.remove("hidden");
                     } else {
                         DOMSelectors.searchResults.classList.remove("hidden")
-                        DOMSelectors.errorSection.classList.add("hidden");
+                        DOMSelectors.bookUnfound.classList.add("hidden");
                     }
                 }
                 noResults();
