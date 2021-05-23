@@ -6,6 +6,9 @@ const DOMSelectors = {
   previousButton: document.querySelector(".previous-btn"),
   nextButton: document.querySelector(".next-btn"),
   reviewBtn: document.querySelector(".book-review"),
+  emptyInput: document.querySelector(".empty-input"),
+  bookUnfound: document.querySelector(".book-not-found"),
+  errorSection: document.querySelector(".errors"),
 };
 
 export { DOMSelectors };

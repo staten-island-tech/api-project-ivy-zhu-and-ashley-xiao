@@ -51,6 +51,10 @@
     border: none;
     background-color: rgb(184, 184, 184);
   }
+
+  .submit-btn:hover {
+    cursor: pointer;
+  }
   
   //results
   
@@ -111,3 +115,12 @@
   .disabled {
     pointer-events: none;
   }
+
+  //errors
+.errors {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}

@@ -13,7 +13,28 @@ const listen = function () {
                 const data = await response.json();
                 const results = data.results;
             
-                console.log(results);
+                function checkForBlank() {
+                    if (searchParams === "") {
+                        DOMSelectors.searchResults.classList.add("hidden");
+                        DOMSelectors.emptyInput.classList.remove("hidden");
+                    } else {
+                        DOMSelectors.searchResults.classList.remove("hidden")
+                        DOMSelectors.errorSection.classList.add("hidden");
+                    }
+                }
+                checkForBlank();
+
+                function noResults() {
+                    if (data.num_results === 0) {
+                        DOMSelectors.searchResults.classList.add("hidden");
+                        DOMSelectors.bookUnfound.classList.remove("hidden");
+                    } else {
+                        DOMSelectors.searchResults.classList.remove("hidden")
+                        DOMSelectors.errorSection.classList.add("hidden");
+                    }
+                }
+                noResults();
+
                 function displayBooks() {
                     results.forEach((book) => {
                         const reviews = book.reviews[0];
