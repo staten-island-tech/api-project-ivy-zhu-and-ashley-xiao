@@ -9,6 +9,7 @@ const DOMSelectors = {
   emptyInput: document.querySelector(".empty-input"),
   bookUnfound: document.querySelector(".book-not-found"),
   errorSection: document.querySelector(".errors"),
+  resultSection: document.querySelector(".searching-results"),
 };
 
 export { DOMSelectors };

@@ -15,10 +15,10 @@ const listen = function () {
                 
                 function checkForBlank() {
                     if (searchParams === "") {
-                        DOMSelectors.searchResults.classList.add("hidden");
+                        DOMSelectors.resultSection.classList.add("hidden");
                         DOMSelectors.emptyInput.classList.remove("hidden");
                     } else {
-                        DOMSelectors.searchResults.classList.remove("hidden")
+                        DOMSelectors.resultSection.classList.remove("hidden")
                         DOMSelectors.emptyInput.classList.add("hidden");
                     }
                 }
@@ -26,10 +26,8 @@ const listen = function () {
 
                 function noResults() {
                     if (data.num_results === 0) {
-                        DOMSelectors.searchResults.classList.add("hidden");
                         DOMSelectors.bookUnfound.classList.remove("hidden");
                     } else {
-                        DOMSelectors.searchResults.classList.remove("hidden")
                         DOMSelectors.bookUnfound.classList.add("hidden");
                     }
                 }
