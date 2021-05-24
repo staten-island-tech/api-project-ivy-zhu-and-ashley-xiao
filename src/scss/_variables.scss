@@ -9,4 +9,32 @@ body{
 }
 
 $primary-color: #ECE3D1;
-$secondary-color: #FF7F50;
+$secondary-color: #35597a;
+
+$phone: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+@mixin bkg-cover-fixed {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@mixin flex-centered {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin default-btns {
+    border-radius: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.hidden{
+    display: none;
+}

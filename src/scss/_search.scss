@@ -4,19 +4,13 @@
 .search-page {
     height: 50%;
     background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.6)), to(rgba(32, 32, 32, 0.6))),url("imgs/books5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    @include bkg-cover-fixed;
+    @include flex-centered;
   }
   
   .search-section {
-    display:flex;
+    @include flex-centered;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 75%;
     padding-top:6rem;
   }
@@ -37,19 +31,15 @@
   .search-bar {
     width: 100%;
     padding: 1rem 2rem;
-    border-radius: 0;
-    border: none;
-    outline: none;
+    @include default-btns;
   }
   
   .submit-btn {
     width: 9rem;
-    outline: none;
-    border-radius: 0;
     padding: 5px 1rem;
     color:black;
-    border: none;
     background-color: rgb(184, 184, 184);
+    @include default-btns;
   }
 
   .submit-btn:hover {
@@ -58,22 +48,19 @@
   
   //results
   .searched-books {
-    display: flex;
+    @include flex-centered;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     width: 90vw;
     margin: 1rem auto;
     padding: 3rem auto;
-    align-items: center;
   }
 
   .search-book {
     width:40%;
     height: 23rem;
     font-size: 1.7rem;
-    display:flex;
-    align-items: center;
+    @include flex-centered;
     flex-direction: column;
     margin: 2rem auto;
     position:relative;
@@ -106,7 +93,7 @@
     color: white;
     border: 1px black solid;
     padding: 1rem;
-    background-color: #2a4a68;
+    background-color: $secondary-color;
     width: 5rem;
   }
 
@@ -117,9 +104,7 @@
   //errors
 .errors {
   font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items:center;
+  @include flex-centered;
 
 }
 

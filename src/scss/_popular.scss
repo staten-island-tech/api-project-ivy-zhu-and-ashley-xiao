@@ -19,9 +19,7 @@
 .previous-btn,
 .next-btn {
   font-size: 2rem;
-  border:none;
-  border-radius: 0;
-  outline: none;
+  @include default-btns;
   height: 3.5rem;
   width: 10rem;
   padding: 5px 1rem;
@@ -35,9 +33,7 @@
 }
 
 #popular-books {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-centered;
   flex-direction: column;
 }
 
@@ -106,7 +102,7 @@
   position: relative;
   display: inline-block;
   overflow:hidden;
-  background: linear-gradient(to right, $secondary-color, $primary-color 50%, black 50%);
+  background: linear-gradient(to right, $secondary-color, $secondary-color 50%, black 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -120,8 +116,6 @@
 }
 
 .popular-heading {
-  display: flex;
+  @include flex-centered;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
