@@ -6,7 +6,7 @@ const listen = function () {
     DOMSelectors.searchForm.addEventListener("submit", function (e) {
         e.preventDefault();
         DOMSelectors.searchResults.innerHTML= ""
-        const searchParams = DOMSelectors.searchInput.value;
+        const searchParams = DOMSelectors.searchInput.value.trim();
         const searchQuery = async function () {
             try {
                 const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?title=${searchParams}&api-key=${key}`);
@@ -48,7 +48,7 @@ const listen = function () {
         
             } catch (error) {
                 console.log(error);
-                alert("something went wrong")
+                alert("Too many search requests!")
             }
         };
         searchQuery();
