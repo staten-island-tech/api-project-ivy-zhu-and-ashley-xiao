@@ -1,0 +1,152 @@
+@import "_variables";
+
+//header
+@media screen and (max-width: $tablet) {
+    .title {
+        font-size: 5rem;
+        font-weight: 300;
+      }
+      
+      .title2 {
+        font-size: 4rem;
+        font-weight: 900;
+      }
+}
+
+@media screen and (max-width: $phone) {
+    .title {
+        font-size: 3.5rem;
+        font-weight: 300;
+      }
+      
+      .title2 {
+        font-size: 4rem;
+        font-weight: 900;
+      }
+}
+
+//nav bar
+@media screen and (max-width: $tablet) {
+    .logo {
+        display: none;
+    }
+
+    .nav-btns {
+        width: 100vw;
+        justify-content: space-around;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: $phone) {
+    .nav-btns {
+        font-size: 2rem;
+    }
+}
+
+//about
+@media screen and (max-width: $tablet) {
+    .nyt-pic {
+        display:none;
+    }
+
+    .aboutnyt-text {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .nyt-pic {
+        display:none;
+    }
+
+    .about-header {
+        font-size: 2.5rem;
+    }
+
+    .about-paragraph {
+        font-size: 2rem;
+        text-align: unset;
+    }
+}
+
+//popular
+@media screen and (max-width: $laptop) {
+    .page-btns {
+        @include flex-centered;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .page-nav {
+        width: 70%;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 4rem;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .page-btns {
+        @include flex-centered;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .page-nav {
+        width: 90%;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 4rem;
+    }
+
+    .popular-header {
+        font-size: 3.5rem;
+    }
+
+    .book-info {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: $phone) {
+    .search-line {
+        font-size: 2rem;
+    }
+
+    .popular-list {
+        flex-direction: column;
+    }
+
+    .book-info {
+        @include flex-centered;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        margin-top: 3rem;
+    }
+}
+
+//search
+@media screen and (max-width: $tablet) {
+    .search-form{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: $phone) {
+    .search-text {
+        font-size: 2.3rem;
+    }
+
+    .search-form{
+        width: 85%;
+    }
+
+    .search-book {
+        width: 80%;
+        height: 20rem;
+    }
+}

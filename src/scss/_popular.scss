@@ -90,15 +90,9 @@
   margin: 1rem;
 }
 
-#popular-books {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .search-line {
   text-decoration: none;
+  text-align: center;
   color: black;
   font-size: 2.5rem;
   font-weight: 400;

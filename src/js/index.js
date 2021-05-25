@@ -17,7 +17,7 @@ const query = async function () {
                 `<div class="popular-list">
                 <img
                 src="${book.book_image}"
-                alt=""
+                alt="Book Cover"
                 class="book-cover">
                 <div class="book-info">
                     <h1 class="book-title">${book.title}</h1>
